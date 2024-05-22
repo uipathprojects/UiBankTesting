@@ -61,10 +61,12 @@ pipeline {
                 packagePath: "Output\\${env.BUILD_NUMBER}",
                 orchestratorAddress: "${UIPATH_ORCH_URL}",
                 orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
+				environments: '',
+				createProcess: true,
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
                 credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '5b39e97b-4985-42b8-a060-235825a290aa'), 
-				traceLevel: 'None',
+				traceLevel: 'Verbose',
 				entryPointPaths: 'Main.xaml'
 	
 
