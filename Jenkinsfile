@@ -41,7 +41,7 @@ pipeline {
                       projectJsonPath: "project.json",
                       version: [$class: 'ManualVersionEntry', version: "${MAJOR}.${MINOR}.${env.BUILD_NUMBER}"],
                       useOrchestrator: false,
-					  traceLevel: 'None'
+					  traceLevel: 'Verbose'
 					)
 	            }
 	        }
@@ -67,8 +67,8 @@ pipeline {
 				createProcess: true,
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-                //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '5b39e97b-4985-42b8-a060-235825a290aa'), 
-				credentials: ExternalApp(accountForApp: 'jeet', applicationId: '992484da-6b8e-412d-8625-472158a5e5f0', applicationScope: 'OR.Assets OR.Assets.Read OR.Assets.Write OR.BackgroundTasks OR.BackgroundTasks.Read OR.BackgroundTasks.Write OR.Execution OR.Execution.Read OR.Execution.Write OR.Folders OR.Folders.Read OR.Folders.Write OR.Jobs OR.Jobs.Read OR.Jobs.Write OR.Machines OR.Machines.Read OR.Machines.Write OR.ML OR.ML.Read OR.ML.Write OR.Queues OR.Queues.Read OR.Queues.Write OR.Robots OR.Robots.Read OR.Robots.Write OR.Tasks OR.Tasks.Read OR.Tasks.Write OR.TestDataQueues OR.TestDataQueues.Read OR.TestDataQueues.Write OR.TestSetExecutions OR.TestSetExecutions.Read OR.TestSetExecutions.Write OR.TestSets OR.TestSets.Read OR.TestSets.Write OR.TestSetSchedules OR.TestSetSchedules.Read OR.TestSetSchedules.Write', applicationSecret: '%m**vYDXvF7gzu5l', identityUrl: 'https://staging.uipath.com/identity_/'),
+                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '5b39e97b-4985-42b8-a060-235825a290aa'), 
+				//credentials: ExternalApp(accountForApp: 'jeet', applicationId: '992484da-6b8e-412d-8625-472158a5e5f0', applicationScope: 'OR.Assets OR.Assets.Read OR.Assets.Write OR.BackgroundTasks OR.BackgroundTasks.Read OR.BackgroundTasks.Write OR.Execution OR.Execution.Read OR.Execution.Write OR.Folders OR.Folders.Read OR.Folders.Write OR.Jobs OR.Jobs.Read OR.Jobs.Write OR.Machines OR.Machines.Read OR.Machines.Write OR.ML OR.ML.Read OR.ML.Write OR.Queues OR.Queues.Read OR.Queues.Write OR.Robots OR.Robots.Read OR.Robots.Write OR.Tasks OR.Tasks.Read OR.Tasks.Write OR.TestDataQueues OR.TestDataQueues.Read OR.TestDataQueues.Write OR.TestSetExecutions OR.TestSetExecutions.Read OR.TestSetExecutions.Write OR.TestSets OR.TestSets.Read OR.TestSets.Write OR.TestSetSchedules OR.TestSetSchedules.Read OR.TestSetSchedules.Write', applicationSecret: '%m**vYDXvF7gzu5l', identityUrl: 'https://staging.uipath.com/identity_/'),
 				traceLevel: 'Verbose',
 				entryPointPaths: 'Main.xaml'
 
