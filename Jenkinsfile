@@ -6,10 +6,13 @@ pipeline {
 	        MAJOR = '1'
 	        MINOR = '0'
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://staging.uipath.com"
-	        UIPATH_ORCH_LOGICAL_NAME = "jeet"
+	        UIPATH_ORCH_URL = "https://cloud.uipath.com"
+	        UIPATH_ORCH_LOGICAL_NAME = "jeetriauqow"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
-	        UIPATH_ORCH_FOLDER_NAME = "Folder1"
+	        UIPATH_ORCH_FOLDER_NAME = "Shared"
+			UIPATH_ORCH_APP_ID = "545b4acc-615e-477f-9723-d61a451e344a"
+			UIPATH_ORCH_APP_SECRET = "7kKn)6XpiERYq5Z4"
+			UIPATH_ORCH_APP_SCOPE = "OR.Administration OR.Analytics OR.Assets OR.Audit OR.BackgroundTasks OR.Execution OR.Folders OR.Hypervisor OR.Jobs OR.License OR.Machines OR.ML OR.Monitoring OR.Robots OR.Tasks"
 	    }
 	
 
@@ -69,10 +72,10 @@ pipeline {
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
                 //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '5b39e97b-4985-42b8-a060-235825a290aa'), 
 				credentials: ExternalApp(
-					accountForApp: 'jeet', 
-					applicationId: '992484da-6b8e-412d-8625-472158a5e5f0', 
-					applicationScope: 'OR.Assets OR.BackgroundTasks OR.Execution OR.Folders OR.Jobs OR.Machines OR.Robots OR.Tasks OR.TestDataQueues OR.TestSetExecutions OR.TestSets OR.TestSetSchedules', 
-					applicationSecret: '%m**vYDXvF7gzu5l', 
+					accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
+					applicationId: "${UIPATH_ORCH_APP_ID}", 
+					applicationScope: "${UIPATH_ORCH_APP_SCOPE}", 
+					applicationSecret: "${UIPATH_ORCH_APP_SECRET}", 
 					identityUrl: "${UIPATH_ORCH_URL}"),
 				traceLevel: 'Verbose',
 				entryPointPaths: 'Main.xaml'
