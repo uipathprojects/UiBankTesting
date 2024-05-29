@@ -50,6 +50,24 @@ pipeline
 					)
 	            }
 	        }
+			
+	         // Deploy Stages
+	        stage('Deploy to UAT') {
+	            steps {
+	                echo "Deploying ${BRANCH_NAME} to UAT "               
+				    UiPathDeploy (
+						packagePath: "${WORKSPACE}\\Output\\${env.BUILD_NUMBER}", 
+						orchestratorAddress: "${UIPATH_ORCH_URL}", 
+						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
+						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+						environments: '',
+						//credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
+						credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey'],
+						traceLevel: 'None',
+						entryPointPaths: 'Main.xaml'
+					)
+				}
+	        }
 	    }
 	
 
@@ -58,5 +76,18 @@ pipeline
 	        // Timeout for pipeline
 	        timeout(time:80, unit:'MINUTES')
 	        skipDefaultCheckout()
+	    }
+		
+	post {
+	        success {
+	            echo 'Deployment has been completed!'
+	        }
+	        failure {
+	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
+	        }
+	        always {
+	            /* Clean workspace if success */
+	            //cleanWs()
+	        }
 	    }
 }
