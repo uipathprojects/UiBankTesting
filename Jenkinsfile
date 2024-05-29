@@ -61,6 +61,7 @@ pipeline
 						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 						environments: '',
+						createProcess: true,
 						//credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
 						credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey'],
 						traceLevel: 'None',
@@ -78,16 +79,5 @@ pipeline
 	        skipDefaultCheckout()
 	    }
 		
-	post {
-	        success {
-	            echo 'Deployment has been completed!'
-	        }
-	        failure {
-	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
-	        }
-	        always {
-	            /* Clean workspace if success */
-	            //cleanWs()
-	        }
-	    }
+	
 }
