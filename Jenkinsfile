@@ -55,7 +55,7 @@ pipeline {
 	        stage('Test') {
 	            steps {
 	                echo 'Testing..the workflow...'
-				
+				}
 	        }
 	
 
