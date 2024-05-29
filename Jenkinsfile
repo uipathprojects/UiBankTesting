@@ -63,7 +63,7 @@ pipeline {
 	        stage('Deploy to UAT') {
 	            steps {
 	                echo "Deploying ${BRANCH_NAME} to UAT "               
-	        )
+	        
 	        }
 	        }
 	
