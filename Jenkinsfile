@@ -1,7 +1,8 @@
-pipeline {
+pipeline 
+{
  agent any
 
-    	        // Environment Variables
+    	    // Environment Variables
 	        environment {
 	        MAJOR = '1'
 	        MINOR = '0'
@@ -49,33 +50,6 @@ pipeline {
 					)
 	            }
 	        }
-			
-			
-	         // Test Stages
-	        stage('Test') {
-	            steps {
-	                echo 'Testing..the workflow...'
-				}
-	        }
-	
-
-	         // Deploy Stages
-	        stage('Deploy to UAT') {
-	            steps {
-	                echo "Deploying ${BRANCH_NAME} to UAT "               
-	        
-	        }
-	        }
-	
-
-	
-
-	         // Deploy to Production Step
-	        stage('Deploy to Production') {
-	            steps {
-	                echo 'Deploy to Production'
-	                }
-	            }
 	    }
 	
 
@@ -85,24 +59,4 @@ pipeline {
 	        timeout(time:80, unit:'MINUTES')
 	        skipDefaultCheckout()
 	    }
-	
-
-	
-
-	    // 
-	    post {
-	        success {
-	            echo 'Deployment has been completed!'
-	        }
-	        failure {
-	          echo "FAILED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.JOB_DISPLAY_URL})"
-	        }
-	        always {
-	            /* Clean workspace if success */
-	            cleanWs()
-	        }
-	    }
-	
-
-	}
 }
