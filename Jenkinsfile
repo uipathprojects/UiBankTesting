@@ -6,7 +6,7 @@ pipeline {
 	        MAJOR = '1'
 	        MINOR = '0'
 	        //Orchestrator Services
-	        UIPATH_ORCH_URL = "https://cloud.uipath.com"
+	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "jeetriauqow"
 	        UIPATH_ORCH_TENANT_NAME = "DefaultTenant"
 	        UIPATH_ORCH_FOLDER_NAME = "Shared"
@@ -71,7 +71,13 @@ pipeline {
 				createProcess: true,
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: "${UIPATH_ORCH_API_USERKEY}"), 
+                //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: "${UIPATH_ORCH_API_USERKEY}"), 
+				credentials: ExternalApp(
+				accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
+				applicationId: "${UIPATH_ORCH_APP_ID}", 
+				applicationScope: "${UIPATH_ORCH_APP_SCOPE}", 
+				applicationSecret: "${UIPATH_ORCH_APP_SECRET}", 
+				identityUrl: "${UIPATH_ORCH_URL}"),
 				traceLevel: 'Verbose',
 				entryPointPaths: 'Main.xaml'
 	        )
