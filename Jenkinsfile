@@ -12,8 +12,9 @@ pipeline {
 	        UIPATH_ORCH_FOLDER_NAME = "Shared"
 			UIPATH_ORCH_APP_ID = "545b4acc-615e-477f-9723-d61a451e344a"
 			UIPATH_ORCH_APP_SECRET = "7kKn)6XpiERYq5Z4"
-			UIPATH_ORCH_APP_SCOPE = "OR.Administration OR.Analytics OR.Assets OR.Audit OR.BackgroundTasks OR.Execution OR.Folders OR.Hypervisor OR.Jobs OR.License OR.Machines OR.ML OR.Monitoring OR.Robots OR.Tasks"
-	    }
+			UIPATH_ORCH_APP_SCOPE = "OR.Administration OR.Analytics OR.Assets OR.Audit OR.BackgroundTasks OR.Execution OR.Folders OR.Hypervisor OR.Jobs OR.License OR.Machines OR.ML OR.Monitoring OR.Robots OR.Tasks OR.Queues OR.Settings OR.TestDataQueues OR.TestSetExecutions OR.TestSets OR.TestSetSchedules OR.Users OR.Webhooks"
+			UIPATH_ORCH_API_USERKEY = "1Fj8lfnYsua2gvOwwWJUK4qKfDgerAQVaSUnumt0fzJPx"
+		}
 	
 
 	    stages {
@@ -70,13 +71,7 @@ pipeline {
 				createProcess: true,
                 folderName: "${UIPATH_ORCH_FOLDER_NAME}",
                 //credentials: [$class: 'UserPassAuthenticationEntry', credentialsId: 'APIUserKey']
-                //credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '5b39e97b-4985-42b8-a060-235825a290aa'), 
-				credentials: ExternalApp(
-					accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
-					applicationId: "${UIPATH_ORCH_APP_ID}", 
-					applicationScope: "${UIPATH_ORCH_APP_SCOPE}", 
-					applicationSecret: "${UIPATH_ORCH_APP_SECRET}", 
-					identityUrl: "${UIPATH_ORCH_URL}"),
+                credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: "${UIPATH_ORCH_API_USERKEY}"), 
 				traceLevel: 'Verbose',
 				entryPointPaths: 'Main.xaml'
 	        )
