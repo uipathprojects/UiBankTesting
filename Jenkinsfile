@@ -70,6 +70,22 @@ pipeline
 						traceLevel: 'Verbose',
 						entryPointPaths: 'Main.xaml'
 					)
+					
+					echo "Running Tests in UAT"
+					UiPathTest (
+						testTarget: [$class: 'TestSetEntry', testSet: "TestSet1"],
+						orchestratorAddress: "${UIPATH_ORCH_URL}",
+						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
+						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+						disableBuiltInNugetFeeds: false,
+						traceLevel: "Trace",
+						testResultsOutputPath: "",
+						credentials: ExternalApp(accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
+										applicationId: "${UIPATH_ORCH_APP_ID}", 
+										applicationScope: "${UIPATH_ORCH_APP_SCOPE}", 
+										applicationSecret: 'CloudOrchAppSecret', 
+										identityUrl: ''),
+					)
 				}
 	        }
 			
