@@ -66,7 +66,7 @@ pipeline
 										applicationId: "${UIPATH_ORCH_APP_ID}", 
 										applicationScope: "${UIPATH_ORCH_APP_SCOPE}", 
 										applicationSecret: 'CloudOrchAppSecret', 
-										identityUrl: '')
+										identityUrl: ''),
 						traceLevel: 'Verbose',
 						entryPointPaths: 'Main.xaml'
 					)
