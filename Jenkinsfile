@@ -78,7 +78,7 @@ pipeline
 						orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
 						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 						disableBuiltInNugetFeeds: false,
-						traceLevel: "Trace",
+						traceLevel: 'Verbose',
 						testResultsOutputPath: "",
 						credentials: ExternalApp(accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
 										applicationId: "${UIPATH_ORCH_APP_ID}", 
