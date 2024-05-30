@@ -80,6 +80,7 @@ pipeline
 						disableBuiltInNugetFeeds: false,
 						traceLevel: 'Verbose',
 						timeout: 10000,
+						parametersFilePath: '',
 						testResultsOutputPath: '',
 						credentials: ExternalApp(accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
 										applicationId: "${UIPATH_ORCH_APP_ID}", 
