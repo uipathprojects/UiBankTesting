@@ -28,8 +28,6 @@ pipeline
 	                echo "Jenkins JOB Name ${env.JOB_NAME}"
 	                echo "GitHub BranhName ${env.BRANCH_NAME}"
 	                checkout scm
-	
-
 	            }
 	        }
 	
