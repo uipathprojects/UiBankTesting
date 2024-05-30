@@ -79,7 +79,7 @@ pipeline
 						folderName: "${UIPATH_ORCH_FOLDER_NAME}",
 						disableBuiltInNugetFeeds: false,
 						traceLevel: 'Verbose',
-						timeout: '10000',
+						timeout: 10000,
 						testResultsOutputPath: '',
 						credentials: ExternalApp(accountForApp: "${UIPATH_ORCH_LOGICAL_NAME}", 
 										applicationId: "${UIPATH_ORCH_APP_ID}", 
