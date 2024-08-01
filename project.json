@@ -1,6 +1,5 @@
 {
   "name": "UiBankTesting",
-  "projectId": "40aad4d0-1638-4417-9e02-078a5d6c0d6c",
   "description": "Test Automation Project",
   "main": "Main.xaml",
   "dependencies": {
@@ -20,7 +19,6 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -46,11 +44,16 @@
         "editingStatus": "Publishable",
         "testCaseId": "55726931-e158-4c32-8dd8-89d41698b79d",
         "testCaseType": "TestCase",
-        "fileName": "TestCase.xaml"
+        "fileName": "TestCase1.xaml"
+      },
+      {
+        "editingStatus": "Publishable",
+        "testCaseId": "01cc24e5-395f-4236-ad3c-884e4129c2eb",
+        "testCaseType": "TestCase",
+        "fileName": "TestCase2.xaml"
       }
     ],
-    "modernBehavior": true,
-    "saveToCloud": false
+    "modernBehavior": true
   },
   "expressionLanguage": "VisualBasic",
   "isTemplate": false,

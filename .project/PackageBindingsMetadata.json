@@ -3,7 +3,6 @@
     "UiPath.Core.Activities.AddAndProcessQueueItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -18,14 +17,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.AddQueueItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -40,14 +37,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.AddTransactionItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -62,8 +57,7 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.BeginProcess": [
@@ -78,14 +72,12 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        },
-        "DefaultValueSource": "Default"
+        }
       }
     ],
     "UiPath.Core.Activities.BulkAddQueueItems": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -100,14 +92,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.DeleteQueueItems": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -118,14 +108,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetJobs": [
       {
         "Type": "process",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -136,14 +124,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetQueueItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -158,14 +144,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetQueueItems": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -180,14 +164,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetRobotAsset": [
       {
         "Type": "asset",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -202,14 +184,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetRobotCredential": [
       {
         "Type": "asset",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -224,8 +204,7 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.GetTransactionItem": [
@@ -240,14 +219,12 @@
             "Value": "FolderPath",
             "ValueSource": "Property"
           }
-        },
-        "DefaultValueSource": "Default"
+        }
       }
     ],
     "UiPath.Core.Activities.InvokeProcess": [
       {
         "Type": "process",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -262,14 +239,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.PostponeTransactionItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -280,14 +255,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.QueueTrigger": [
       {
         "Type": "QueueTrigger",
-        "PublishNullValues": false,
         "Key": {
           "Value": "BindingsKey",
           "ValueSource": "Property"
@@ -316,14 +289,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.SetAsset": [
       {
         "Type": "asset",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -338,14 +309,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.SetCredential": [
       {
         "Type": "asset",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -360,14 +329,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.SetTransactionProgress": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -378,14 +345,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.SetTransactionStatus": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -396,14 +361,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.StartJob": [
       {
         "Type": "process",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -418,14 +381,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.StopJob": [
       {
         "Type": "process",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -436,14 +397,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.DeleteStorageFile": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -458,14 +417,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.DownloadStorageFile": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -480,14 +437,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.ListStorageFiles": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -502,14 +457,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.ReadStorageText": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -524,14 +477,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.UploadStorageFile": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -546,14 +497,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.Storage.WriteStorageText": [
       {
         "Type": "bucket",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -568,14 +517,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.TimeTrigger": [
       {
         "Type": "TimeTrigger",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -591,14 +538,12 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ],
     "UiPath.Core.Activities.WaitQueueItem": [
       {
         "Type": "queue",
-        "PublishNullValues": false,
         "Key": {
           "Value": "N/A",
           "ValueSource": "Property"
@@ -613,8 +558,7 @@
             "ValueSource": "Property"
           }
         },
-        "SubBindings": [],
-        "DefaultValueSource": "Property"
+        "SubBindings": []
       }
     ]
   }
